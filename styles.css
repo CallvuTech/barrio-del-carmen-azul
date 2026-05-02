@@ -1,0 +1,246 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --azul: #1a4a7a;
+  --azul-claro: #2d6db5;
+  --fondo: #f8f7f4;
+  --fondo-alt: #ffffff;
+  --texto: #1a1a2e;
+  --texto-suave: #5a5a72;
+  --borde: #d0d5e0;
+  --radio: 8px;
+  --sombra: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Header */
+header {
+  background: var(--azul);
+  color: white;
+  padding: 3.5rem 0 3rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+header h1 span {
+  color: #a8c8f0;
+}
+
+.subtitle {
+  margin-top: 0.75rem;
+  font-size: 1.1rem;
+  color: #c8ddf0;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Sections */
+.section {
+  padding: 3.5rem 0;
+  background: var(--fondo);
+}
+
+.section--alt {
+  background: var(--fondo-alt);
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--azul);
+  margin-bottom: 1rem;
+}
+
+.section p {
+  color: var(--texto-suave);
+  font-size: 1.05rem;
+}
+
+/* Activities list */
+.activities {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.activities li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  color: var(--texto-suave);
+  font-size: 1.05rem;
+}
+
+.activities li::before {
+  content: '✓';
+  color: var(--azul-claro);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+/* Map */
+.map-wrapper {
+  margin-top: 1.25rem;
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  border: 1px solid var(--borde);
+}
+
+.map-wrapper iframe {
+  display: block;
+}
+
+/* Contact form */
+#contact-form {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.field label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--texto);
+}
+
+.field input,
+.field textarea {
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--borde);
+  border-radius: var(--radio);
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--texto);
+  background: var(--fondo);
+  transition: border-color 0.2s;
+  resize: vertical;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--azul-claro);
+}
+
+button[type="submit"] {
+  align-self: flex-start;
+  background: var(--azul);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: var(--radio);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: var(--azul-claro);
+}
+
+button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#form-status {
+  font-size: 0.95rem;
+  min-height: 1.4rem;
+  color: var(--texto-suave);
+}
+
+#form-status.success {
+  color: #2d7a4a;
+}
+
+#form-status.error {
+  color: #b03030;
+}
+
+.contact-email {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.contact-email a {
+  color: var(--azul-claro);
+  text-decoration: none;
+}
+
+.contact-email a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: var(--azul);
+  color: #c8ddf0;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+footer a {
+  color: #a8c8f0;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+@media (max-width: 480px) {
+  button[type="submit"] {
+    align-self: stretch;
+  }
+}
