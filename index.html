@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Comisión Vecinal del Barrio del Carmen, Azul. Eventos, noticias y actividades de nuestra comunidad.">
+  <title>Barrio del Carmen · Azul</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Comisión Vecinal<br><span>Barrio del Carmen</span></h1>
+      <p class="subtitle">Azul, Buenos Aires</p>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="quienes-somos" class="section">
+      <div class="container">
+        <h2>Quiénes somos</h2>
+        <p>Somos el grupo de vecinos que organiza y cuida el Barrio del Carmen en Azul. Acá encontrás eventos, noticias y todo lo que pasa en el barrio.</p>
+      </div>
+    </section>
+
+    <section id="que-hacemos" class="section section--alt">
+      <div class="container">
+        <h2>Qué hacemos</h2>
+        <ul class="activities">
+          <li>Organizamos eventos y actividades para el barrio</li>
+          <li>Informamos sobre novedades y obras en la zona</li>
+          <li>Coordinamos con el municipio mejoras para la comunidad</li>
+          <li>Mantenemos conectados a los vecinos del barrio</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="donde-estamos" class="section">
+      <div class="container">
+        <h2>Dónde estamos</h2>
+        <div class="map-wrapper">
+          <iframe
+            title="Mapa Barrio del Carmen, Azul"
+            src="https://www.google.com/maps?q=barrio+del+carmen+azul+buenos+aires&output=embed"
+            width="100%"
+            height="350"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section section--alt">
+      <div class="container">
+        <h2>Contacto</h2>
+        <p>Escribinos y te respondemos a la brevedad.</p>
+        <form id="contact-form" novalidate>
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+          </div>
+          <div class="field">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" placeholder="¿En qué te podemos ayudar?" rows="5" required></textarea>
+          </div>
+          <button type="submit" id="submit-btn">Enviar mensaje</button>
+          <p id="form-status" role="status" aria-live="polite"></p>
+        </form>
+        <p class="contact-email">O escribinos directamente a <a href="mailto:contacto@barriodelcarmen.com.ar">contacto@barriodelcarmen.com.ar</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Comisión Vecinal Barrio del Carmen · Azul, Buenos Aires</p>
+      <p><a href="mailto:contacto@barriodelcarmen.com.ar">contacto@barriodelcarmen.com.ar</a></p>
+    </div>
+  </footer>
+
+  <script src="contact.js"></script>
+</body>
+</html>
