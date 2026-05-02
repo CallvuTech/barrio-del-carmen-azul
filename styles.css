@@ -157,7 +157,8 @@ header h1 span {
 
 .field input:focus,
 .field textarea:focus {
-  outline: none;
+  outline: 2px solid var(--azul-claro);
+  outline-offset: 2px;
   border-color: var(--azul-claro);
 }
 
@@ -182,6 +183,11 @@ button[type="submit"]:hover {
 button[type="submit"]:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+button[type="submit"]:focus-visible {
+  outline: 2px solid var(--azul-claro);
+  outline-offset: 2px;
 }
 
 #form-status {
@@ -210,6 +216,34 @@ button[type="submit"]:disabled {
 
 .contact-email a:hover {
   text-decoration: underline;
+}
+
+/* Map link */
+.map-link-wrapper {
+  margin-top: 1.25rem;
+}
+
+.map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--azul);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radio);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.map-link:hover {
+  background: var(--azul-claro);
+}
+
+.map-link:focus-visible {
+  outline: 2px solid var(--azul-claro);
+  outline-offset: 2px;
 }
 
 /* Footer */

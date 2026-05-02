@@ -26,19 +26,28 @@ export async function onRequestPost(context) {
     });
   }
 
-  const res = await fetch('https://api.brevo.com/v3/smtp/email', {
-    method: 'POST',
-    headers: {
-      'api-key': context.env.BREVO_API_KEY,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      sender: { name: 'Web Barrio del Carmen', email: 'contacto@barriodelcarmen.com.ar' },
-      to: [{ email: 'contacto@barriodelcarmen.com.ar' }],
-      subject: `Mensaje de ${nombre} — Web Barrio del Carmen`,
-      textContent: `Nombre: ${nombre}\n\n${mensaje}`,
-    }),
-  });
+  let res;
+  try {
+    res = await fetch('https://api.brevo.com/v3/smtp/email', {
+      method: 'POST',
+      headers: {
+        'api-key': context.env.BREVO_API_KEY,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        sender: { name: 'Web Barrio del Carmen', email: 'contacto@barriodelcarmen.com.ar' },
+        to: [{ email: 'contacto@barriodelcarmen.com.ar' }],
+        subject: `Mensaje de ${nombre} — Web Barrio del Carmen`,
+        textContent: `Nombre: ${nombre}\n\n${mensaje}`,
+      }),
+    });
+  } catch (err) {
+    console.error('Brevo unreachable', err);
+    return new Response(JSON.stringify({ ok: false, error: 'brevo unreachable' }), {
+      status: 502,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  }
 
   if (!res.ok) {
     const detail = await res.text().catch(() => '');
