@@ -218,6 +218,40 @@ button[type="submit"]:focus-visible {
   text-decoration: underline;
 }
 
+/* Historia */
+.historia-foto {
+  margin: 1.25rem 0;
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  border: 1px solid var(--borde);
+}
+
+.historia-foto img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.historia-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.historia-texto p {
+  color: var(--texto-suave);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.historia-fuente {
+  font-size: 0.85rem !important;
+  color: var(--borde) !important;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
 /* Map link */
 .map-link-wrapper {
   margin-top: 1.25rem;
