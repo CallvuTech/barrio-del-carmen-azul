@@ -312,6 +312,37 @@ button[type="submit"]:focus-visible {
   line-height: 1.5;
 }
 
+.card-detalle a {
+  color: var(--azul-claro);
+  text-decoration: none;
+  font-size: inherit;
+}
+
+.card-detalle a:hover {
+  text-decoration: underline;
+}
+
+.card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.card-links a {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--azul-claro);
+  text-decoration: none;
+  background: color-mix(in srgb, var(--azul-claro) 10%, transparent);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}
+
+.card-links a:hover {
+  background: color-mix(in srgb, var(--azul-claro) 20%, transparent);
+}
+
 /* Historia */
 .historia-foto {
   margin: 1.25rem 0;
