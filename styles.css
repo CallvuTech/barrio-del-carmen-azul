@@ -38,28 +38,57 @@ body {
 header {
   background: var(--azul);
   color: white;
-  padding: 3.5rem 0 3rem;
+  padding: 3rem 0 3.5rem;
   text-align: center;
 }
 
-header h1 {
-  font-size: clamp(1.8rem, 5vw, 2.8rem);
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+.header-logo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
 }
 
-header h1 span {
-  color: #a8c8f0;
+header h1 {
+  line-height: 1.1;
+  font-weight: normal;
+}
+
+.header-label {
+  display: block;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: clamp(0.75rem, 2vw, 0.9rem);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #9bbcd8;
+  margin-bottom: 0.4rem;
+}
+
+.header-nombre {
+  display: block;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.4rem, 6.5vw, 3.8rem);
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.01em;
 }
 
 .subtitle {
-  margin-top: 0.75rem;
-  font-size: 1.1rem;
-  color: #c8ddf0;
-  letter-spacing: 0.04em;
+  margin-top: 0.85rem;
+  font-size: 0.8rem;
+  color: #7aa4c8;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 400;
+}
+
+.slogan {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  color: rgba(200, 225, 245, 0.8);
+  font-style: italic;
 }
 
 /* Sections */
@@ -218,6 +247,181 @@ button[type="submit"]:focus-visible {
   text-decoration: underline;
 }
 
+/* Foto comisión */
+.comision-foto {
+  margin: 1.75rem auto 0;
+  max-width: 480px;
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  border: 1px solid var(--borde);
+}
+
+.comision-foto img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Comisión directiva */
+.comision {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1.5px solid var(--borde);
+}
+
+.comision h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--azul-claro);
+  margin-bottom: 0.9rem;
+}
+
+.comision-lista {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.5rem 1rem;
+}
+
+.comision-lista li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.comision-nombre {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--texto);
+}
+
+.comision-cargo {
+  font-size: 0.8rem;
+  color: var(--azul-claro);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Nuestro barrio */
+.barrio-grupo {
+  margin-top: 2.5rem;
+}
+
+.barrio-grupo:first-of-type {
+  margin-top: 1.5rem;
+}
+
+.barrio-grupo h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--azul-claro);
+  margin-bottom: 0.75rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.card {
+  background: var(--fondo-alt);
+  border: 1.5px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 0.9rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.card--pendiente {
+  opacity: 0.45;
+  border-style: dashed;
+}
+
+.card-titulo {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--texto);
+}
+
+.card-detalle {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  line-height: 1.5;
+}
+
+.card-detalle a {
+  color: var(--azul-claro);
+  text-decoration: none;
+  font-size: inherit;
+}
+
+.card-detalle a:hover {
+  text-decoration: underline;
+}
+
+.card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.card-links a {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--azul-claro);
+  text-decoration: none;
+  background: color-mix(in srgb, var(--azul-claro) 10%, transparent);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}
+
+.card-links a:hover {
+  background: color-mix(in srgb, var(--azul-claro) 20%, transparent);
+}
+
+/* Historia */
+.historia-foto {
+  margin: 1.25rem 0;
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  border: 1px solid var(--borde);
+}
+
+.historia-foto img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.historia-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.historia-texto p {
+  color: var(--texto-suave);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.historia-fuente {
+  font-size: 0.85rem !important;
+  color: var(--borde) !important;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
 /* Map link */
 .map-link-wrapper {
   margin-top: 1.25rem;
@@ -271,6 +475,32 @@ footer .container {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.social-links a {
+  color: #a8c8f0;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.social-links a:focus-visible {
+  outline: 2px solid var(--azul-claro);
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
 @media (max-width: 480px) {
