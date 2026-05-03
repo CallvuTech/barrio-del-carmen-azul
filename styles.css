@@ -38,8 +38,16 @@ body {
 header {
   background: var(--azul);
   color: white;
-  padding: 3.5rem 0 3rem;
+  padding: 3rem 0 3.5rem;
   text-align: center;
+}
+
+.header-logo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
@@ -60,6 +68,13 @@ header h1 span {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   font-weight: 600;
+}
+
+.slogan {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  color: rgba(200, 225, 245, 0.8);
+  font-style: italic;
 }
 
 /* Sections */
@@ -216,6 +231,22 @@ button[type="submit"]:focus-visible {
 
 .contact-email a:hover {
   text-decoration: underline;
+}
+
+/* Foto comisión */
+.comision-foto {
+  margin: 1.75rem auto 0;
+  max-width: 480px;
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  border: 1px solid var(--borde);
+}
+
+.comision-foto img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* Comisión directiva */
