@@ -1,5 +1,15 @@
+# OS
 .DS_Store
 Thumbs.db
+
+# Logs
 *.log
+
+# Environment
 .env
 .env.local
+
+# Tooling artifacts
+.playwright-mcp/
+docs/superpowers/
+node_modules/
