@@ -218,6 +218,49 @@ button[type="submit"]:focus-visible {
   text-decoration: underline;
 }
 
+/* Comisión directiva */
+.comision {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1.5px solid var(--borde);
+}
+
+.comision h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--azul-claro);
+  margin-bottom: 0.9rem;
+}
+
+.comision-lista {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.5rem 1rem;
+}
+
+.comision-lista li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.comision-nombre {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--texto);
+}
+
+.comision-cargo {
+  font-size: 0.8rem;
+  color: var(--azul-claro);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 /* Nuestro barrio */
 .barrio-grupo {
   margin-top: 2.5rem;
