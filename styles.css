@@ -449,8 +449,13 @@ button[type="submit"]:focus-visible {
   transition: background 0.2s;
 }
 
+.map-link:visited {
+  color: white;
+}
+
 .map-link:hover {
   background: var(--azul-claro);
+  color: white;
 }
 
 .map-link:focus-visible {
