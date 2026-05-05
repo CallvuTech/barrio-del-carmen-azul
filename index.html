@@ -179,6 +179,13 @@
           <h3>Educación</h3>
           <div class="cards">
             <div class="card">
+              <div class="card-titulo">Jardín de Infantes Nº 908</div>
+              <div class="card-detalle">Falucho esq. Castellar · Tel. 2281 42-9793</div>
+              <div class="card-links">
+                <a href="mailto:jardin908azul@abc.gob.ar">jardin908azul@abc.gob.ar</a>
+              </div>
+            </div>
+            <div class="card">
               <div class="card-titulo">EP Nº 18 — Juan B. Alberdi</div>
               <div class="card-detalle">Castellar 1245 · Tel. 2281 43-5086</div>
               <div class="card-links">
@@ -261,7 +268,8 @@
           <img
             src="/img/foto-antigua-capilla-del-carmen.jpg"
             alt="Capilla del Barrio del Carmen, Azul"
-            loading="lazy">
+            loading="lazy"
+            width="900" height="600">
         </figure>
         <div class="historia-texto">
           <p>A comienzos de los años 20, en un populoso barrio de la colonia de inmigrantes italianos —más precisamente de Sicilia— que se ubicaban cerca de la cervecería de los Piazza y en ella trabajaban, surgió la iniciativa de construir una capilla. El proyecto tuvo el apoyo principal de la Sociedad Católica de la Virgen del Carmen y San Roque, y el padre César Caneva se sumó entusiasmado a la causa.</p>
@@ -298,9 +306,14 @@
             <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" maxlength="100" required>
           </div>
           <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Tu email" maxlength="200" required>
+          </div>
+          <div class="field">
             <label for="mensaje">Mensaje</label>
             <textarea id="mensaje" name="mensaje" placeholder="¿En qué te podemos ayudar?" rows="5" maxlength="2000" required></textarea>
           </div>
+          <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
           <button type="submit" id="submit-btn">Enviar mensaje</button>
           <p id="form-status" role="status" aria-live="polite"></p>
         </form>
