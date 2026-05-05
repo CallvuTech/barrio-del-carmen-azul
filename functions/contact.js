@@ -17,14 +17,6 @@ export async function onRequestPost(context) {
     });
   }
 
-  // Honeypot: bots fill hidden fields, humans don't
-  if (body.website) {
-    return new Response(JSON.stringify({ ok: true }), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' },
-    });
-  }
-
   const nombre = (body.nombre ?? '').trim();
   const email = (body.email ?? '').trim();
   const mensaje = (body.mensaje ?? '').trim();

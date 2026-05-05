@@ -4,7 +4,6 @@ document.getElementById('contact-form').addEventListener('submit', async (e) => 
   const nombre = document.getElementById('nombre').value.trim();
   const email = document.getElementById('email').value.trim();
   const mensaje = document.getElementById('mensaje').value.trim();
-  const website = e.target.elements['website'].value;
   const status = document.getElementById('form-status');
   const btn = document.getElementById('submit-btn');
 
@@ -23,7 +22,7 @@ document.getElementById('contact-form').addEventListener('submit', async (e) => 
     const res = await fetch('/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ nombre, email, mensaje, website }),
+      body: JSON.stringify({ nombre, email, mensaje }),
     });
 
     if (res.ok) {
