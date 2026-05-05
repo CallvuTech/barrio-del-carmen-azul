@@ -34,6 +34,26 @@ body {
   padding: 0 1.25rem;
 }
 
+a {
+  color: var(--azul-claro);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--azul);
+}
+
+a:visited {
+  color: #1a5c8a;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--azul-claro);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 /* Header */
 header {
   background: var(--azul);
@@ -239,12 +259,7 @@ button[type="submit"]:focus-visible {
 }
 
 .contact-email a {
-  color: var(--azul-claro);
-  text-decoration: none;
-}
-
-.contact-email a:hover {
-  text-decoration: underline;
+  font-weight: 600;
 }
 
 /* Foto comisión */
@@ -358,13 +373,7 @@ button[type="submit"]:focus-visible {
 }
 
 .card-detalle a {
-  color: var(--azul-claro);
-  text-decoration: none;
   font-size: inherit;
-}
-
-.card-detalle a:hover {
-  text-decoration: underline;
 }
 
 .card-links {
@@ -377,7 +386,6 @@ button[type="submit"]:focus-visible {
 .card-links a {
   font-size: 0.78rem;
   font-weight: 600;
-  color: var(--azul-claro);
   text-decoration: none;
   background: color-mix(in srgb, var(--azul-claro) 10%, transparent);
   padding: 0.15rem 0.5rem;
@@ -464,11 +472,10 @@ footer {
 
 footer a {
   color: #a8c8f0;
-  text-decoration: none;
 }
 
-footer a:hover {
-  text-decoration: underline;
+footer a:visited {
+  color: #8ab4d8;
 }
 
 footer .container {
