@@ -313,7 +313,10 @@
             <label for="mensaje">Mensaje</label>
             <textarea id="mensaje" name="mensaje" placeholder="¿En qué te podemos ayudar?" rows="5" maxlength="2000" required></textarea>
           </div>
-          <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+          <div aria-hidden="true" style="display:none;position:absolute;left:-9999px">
+            <label for="hp_website">No completar</label>
+            <input type="text" id="hp_website" name="website" tabindex="-1" autocomplete="off">
+          </div>
           <button type="submit" id="submit-btn">Enviar mensaje</button>
           <p id="form-status" role="status" aria-live="polite"></p>
         </form>
