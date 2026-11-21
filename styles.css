@@ -520,3 +520,26 @@ footer .container {
     align-self: stretch;
   }
 }
+.built-by {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: rgba(200,225,245,0.7);
+}
+
+footer .built-by a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+
+footer .built-by a:hover {
+  text-decoration: underline;
+}
